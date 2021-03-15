@@ -1,7 +1,5 @@
 # Calculator
 
-![mobile screenshot](/.github/images/mobile.png?raw=true "Calculator screenshot")
-
 This project exists simply to exercise my web development skills.
 
 ## TODO
@@ -15,3 +13,6 @@ This project exists simply to exercise my web development skills.
 - [ ] Create model tests (Jest)
 - [ ] Polish CSS
 - [ ] Deploy to cloud host
+
+## Target design (might make round buttons square)
+![mobile screenshot](/.github/images/screenshot.jpg?raw=true "Calculator screenshot")
