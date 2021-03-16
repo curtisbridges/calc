@@ -2,18 +2,18 @@ import React, { useContext } from 'react'
 
 import MathContext from '../context/MathContext'
 
-const UnaryOperationButton = ({ text = '' }) => {
+const UnaryOperationButton = ({ text, value }) => {
   const { dispatch } = useContext(MathContext)
 
-  const buttonPressed = (text) => {
-    dispatch({ type: 'UNARY_OPERATION_PRESSED', value: text })
+  const buttonPressed = (value) => {
+    dispatch({ type: 'UNARY_OPERATION_PRESSED', value })
   }
 
   return (
     <button
       className="Button OperationButton UnaryOperationButton"
       onClick={() => {
-        buttonPressed(text)
+        buttonPressed(value)
       }}
     >
       {text}

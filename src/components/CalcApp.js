@@ -8,10 +8,12 @@ import MathContext from '../context/MathContext'
 import './CalcApp.css'
 
 function CalcApp() {
-  const [display, dispatch] = useReducer(mathReducer, '0')
+  const [equation, dispatch] = useReducer(mathReducer, {
+    values: [0, 0],
+  })
 
   return (
-    <MathContext.Provider value={{ display, dispatch }}>
+    <MathContext.Provider value={{ equation, dispatch }}>
       <div className="CalcApp">
         <Display />
         <Buttons />

@@ -1,15 +1,19 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 
 import MathContext from '../context/MathContext'
 
 const Display = () => {
-  const { display } = useContext(MathContext)
+  const { equation } = useContext(MathContext)
 
-  useEffect(() => {
-    console.log('display', display);
-  }, [display])
+  function getDisplayValue(equation) {
+    if (equation.operation) {
+      return equation.values[1].toLocaleString()
+    } else {
+      return equation.values[0].toLocaleString()
+    }
+  }
 
-  return <div className="Display">{display}</div>
+  return <div className="Display">{getDisplayValue(equation)}</div>
 }
 
 export default Display

@@ -2,18 +2,18 @@ import React, { useContext } from 'react'
 
 import MathContext from '../context/MathContext'
 
-const BinaryOperationButton = ({ text = '' }) => {
+const BinaryOperationButton = ({ text, value }) => {
   const { dispatch } = useContext(MathContext)
 
   const buttonPressed = (text) => {
-    dispatch({ type: 'BINARY_OPERATION_PRESSED', text })
+    dispatch({ type: 'BINARY_OPERATION_PRESSED', value })
   }
 
   return (
     <button
       className="Button OperationButton BinaryOperationButton"
       onClick={() => {
-        buttonPressed(text)
+        buttonPressed(value)
       }}
     >
       {text}
