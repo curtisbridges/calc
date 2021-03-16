@@ -7,7 +7,7 @@ import CalcApp from './components/CalcApp'
 
 ReactDOM.render(
   // <React.StrictMode>
-  <CalcApp />,
+    <CalcApp />,
   // </React.StrictMode>,
   document.getElementById('root')
 )

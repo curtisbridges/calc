@@ -13,6 +13,10 @@ This project exists simply to exercise my web development skills.
 - [x] Create model tests (Jest)
 - [x] Polish CSS
 - [x] Deploy to cloud host
+- [ ] handle keypressed events
+- [ ] add animation on button presses
+- [ ] add more tests
+- [ ] refactor model to remove display related operations
 
 ## Target design (might make round buttons square)
 ![mobile screenshot](/.github/images/screenshot.jpg?raw=true "Calculator screenshot")
