@@ -1,5 +1,6 @@
 import React, { useReducer } from 'react'
 
+import { create } from '../model/calculator'
 import Buttons from './Buttons'
 import Display from './Display'
 import mathReducer from '../reducers/mathReducer'
@@ -8,12 +9,10 @@ import MathContext from '../context/MathContext'
 import './CalcApp.css'
 
 function CalcApp() {
-  const [equation, dispatch] = useReducer(mathReducer, {
-    values: [0, 0],
-  })
+  const [model, dispatch] = useReducer(mathReducer, create())
 
   return (
-    <MathContext.Provider value={{ equation, dispatch }}>
+    <MathContext.Provider value={{ model, dispatch }}>
       <div className="CalcApp">
         <Display />
         <Buttons />

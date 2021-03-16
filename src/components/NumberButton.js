@@ -2,21 +2,21 @@ import React, { useContext } from 'react'
 
 import MathContext from '../context/MathContext'
 
-const NumberButton = ({ text = '' }) => {
+const NumberButton = ({ value }) => {
   const { dispatch } = useContext(MathContext)
 
   const buttonPressed = (text) => {
-    dispatch({ type: 'NUMBER_PRESSED', value: text })
+    dispatch({ type: 'NUMBER_PRESSED', value })
   }
 
   return (
     <button
       className="Button NumberButton"
       onClick={() => {
-        buttonPressed(text)
+        buttonPressed(value)
       }}
     >
-      {text}
+      {value}
     </button>
   )
 }

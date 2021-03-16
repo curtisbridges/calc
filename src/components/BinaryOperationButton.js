@@ -6,7 +6,7 @@ const BinaryOperationButton = ({ text, value }) => {
   const { dispatch } = useContext(MathContext)
 
   const buttonPressed = (text) => {
-    dispatch({ type: 'BINARY_OPERATION_PRESSED', value })
+    dispatch({ type: 'OPERATION_PRESSED', value })
   }
 
   return (
