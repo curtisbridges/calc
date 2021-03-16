@@ -1,0 +1,61 @@
+:root {
+  --color-dark-grey: #333;
+  --color-light-grey: #A5A5A5;
+  --color-orange: #FD9F07;
+}
+
+.debug {
+  outline: 1px solid red;
+}
+
+.CalcApp {
+  background-color: black;
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+.Display {
+  color: white;
+  text-align: right;
+  font-size: 5rem;
+  min-height: 6rem;
+}
+
+.Buttons {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 1rem;
+}
+
+.Button {
+  color: white;
+  border: 3px solid #222;
+  border-radius: 100%;
+  font-size: 2.5rem;
+
+  min-width: 5rem;
+  min-height: 5rem;
+
+  padding: .25rem;
+}
+
+.NumberButton {
+  background-color: var(--color-dark-grey);
+}
+
+.BinaryOperationButton {
+  background-color: var(--color-orange);
+}
+
+.UnaryOperationButton {
+  background-color: var(--color-light-grey);
+}
+
+.col4 {
+  grid-column-start: 4;
+}
+
+.span2 {
+  border-radius: 10rem;
+  grid-column-end: span 2;
+}
