@@ -1,15 +1,21 @@
 // Floating point regex
 // ^([+-]?)(\d+).?(\d*)
 const FLOATING_PT_REGEX = /^[+-]?([0-9]*[.])?[0-9]+/
+const MAX_DISPLAY_LENGTH = 9
+const MAX_DISPLAY_VALUE = 999999999
 
 export const model = {
   values: [0, 0],
 }
 
 export const getDisplayValue = (model) => {
-  return model?.operator
-    ? model.values[1].toLocaleString()
-    : model.values[0].toLocaleString()
+  const value = getValue(model)
+
+  if (Math.abs(value) > MAX_DISPLAY_VALUE) {
+    return value.toExponential(2)
+  } else {
+    return value.toLocaleString()
+  }
 }
 
 export const getValue = (model) => {
@@ -53,9 +59,8 @@ export const clear = (model) => {
   delete model.operator
 }
 
-const maxLength = 9
 function hasRoom(num) {
-  return num.toString().length + 1 <= maxLength
+  return num.toString().length + 1 <= MAX_DISPLAY_LENGTH
 }
 
 export const operation = (model, operation) => {
