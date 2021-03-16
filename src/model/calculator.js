@@ -50,7 +50,6 @@ export const appendValue = (model, value) => {
 export const create = () => {
   return {
     values: [0, 0],
-    operation: null,
   }
 }
 
@@ -96,7 +95,7 @@ export const operation = (model, operation) => {
 export const evaluate = (model) => {
   if (model.operator) {
     const equation = `${+model.values[0]} ${model.operator} ${+model.values[1]}`
-    console.log('equation', equation)
+    // console.log('equation', equation)
     delete model.operator
     // eslint-disable-next-line no-eval
     model.values = [eval(equation), 0]
