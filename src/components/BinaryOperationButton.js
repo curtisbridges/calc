@@ -3,6 +3,8 @@ import React, { useContext, useCallback } from 'react'
 import MathContext from '../context/MathContext'
 import useEventListener from '../hooks/useEventListener'
 
+import styles from './CalcApp.module.css'
+
 const BinaryOperationButton = ({ text, value }) => {
   const { dispatch } = useContext(MathContext)
 
@@ -38,7 +40,7 @@ const BinaryOperationButton = ({ text, value }) => {
 
   return (
     <button
-      className="Button OperationButton BinaryOperationButton"
+      className={`${styles.Button} ${styles.OperationButton} ${styles.BinaryOperationButton}`}
       onClick={() => {
         buttonPressed(value)
       }}

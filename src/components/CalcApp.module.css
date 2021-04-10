@@ -67,3 +67,7 @@
   border-radius: 10rem;
   grid-column-end: span 2;
 }
+
+.zero {
+  grid-column-start: 2;
+}

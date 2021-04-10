@@ -1,35 +1,33 @@
-import React, { useContext, useCallback } from 'react'
+import React, { useContext } from 'react'
 
 import MathContext from '../context/MathContext'
 import useEventListener from '../hooks/useEventListener'
 
+import styles from './CalcApp.module.css'
+
+
 const NumberButton = ({ value }) => {
   const { dispatch } = useContext(MathContext)
 
-  const buttonPressed = useCallback(
-    (value) => {
+  const buttonPressed = (value) => {
       dispatch({ type: 'NUMBER_PRESSED', value })
-    },
-    [dispatch]
-  )
+    }
 
-  // Event handler utilizing useCallback ...
-  // ... so that reference never changes.
-  const handler = useCallback(
-    ({ key }) => {
-      if (key === value) {
-        buttonPressed(key)
-      }
-    },
-    [buttonPressed, value]
-  )
+  const handler = ({key}) => {
+    console.log(key);
+    if (key === value) {
+      dispatch({ type: 'NUMBER_PRESSED', value })
+    }
+  }
 
   // Add event listener using our hook
   useEventListener('keyup', handler, this)
 
   return (
     <button
-      className="Button NumberButton"
+      className={`${styles.Button} ${styles.NumberButton} ${
+        value === '0' ? styles.zero : ''
+      }`}
       onClick={() => {
         buttonPressed(value)
       }}

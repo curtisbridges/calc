@@ -3,6 +3,8 @@ import React, { useContext, useCallback } from 'react'
 import MathContext from '../context/MathContext'
 import useEventListener from '../hooks/useEventListener'
 
+import styles from './CalcApp.module.css'
+
 const EqualsButton = ({ span = 1, col }) => {
   const { dispatch } = useContext(MathContext)
 
@@ -27,9 +29,9 @@ const EqualsButton = ({ span = 1, col }) => {
   return (
     <button
       // style={getColStartStyle(col)}
-      className={`Button BinaryOperationButton ${getSpan(span)} ${getColStart(
-        col
-      )}`}
+      className={`${styles.Button} ${styles.BinaryOperationButton} ${getSpan(
+        span
+      )} ${getColStart(col)}`}
       onClick={() => {
         buttonPressed()
       }}
