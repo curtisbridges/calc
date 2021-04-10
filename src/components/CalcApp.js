@@ -8,6 +8,7 @@ import MathContext from '../context/MathContext'
 
 import styles from './CalcApp.module.css'
 
+
 function CalcApp() {
   const [model, dispatch] = useReducer(mathReducer, create())
 

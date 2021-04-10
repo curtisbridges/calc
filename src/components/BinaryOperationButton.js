@@ -5,6 +5,7 @@ import useEventListener from '../hooks/useEventListener'
 
 import styles from './CalcApp.module.css'
 
+
 const BinaryOperationButton = ({ text, value }) => {
   const { dispatch } = useContext(MathContext)
 
@@ -29,7 +30,7 @@ const BinaryOperationButton = ({ text, value }) => {
           }
           break
         default:
-          // console.log('BinaryOperationButton ignoring key', key)
+        // console.log('BinaryOperationButton ignoring key', key)
       }
     },
     [buttonPressed, value]

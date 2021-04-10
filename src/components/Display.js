@@ -5,6 +5,7 @@ import MathContext from '../context/MathContext'
 
 import styles from './CalcApp.module.css'
 
+
 const Display = () => {
   const { model } = useContext(MathContext)
 

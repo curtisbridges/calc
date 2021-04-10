@@ -10,11 +10,10 @@ const NumberButton = ({ value }) => {
   const { dispatch } = useContext(MathContext)
 
   const buttonPressed = (value) => {
-      dispatch({ type: 'NUMBER_PRESSED', value })
-    }
+    dispatch({ type: 'NUMBER_PRESSED', value })
+  }
 
-  const handler = ({key}) => {
-    console.log(key);
+  const handler = ({ key }) => {
     if (key === value) {
       dispatch({ type: 'NUMBER_PRESSED', value })
     }

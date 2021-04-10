@@ -5,6 +5,7 @@ import useEventListener from '../hooks/useEventListener'
 
 import styles from './CalcApp.module.css'
 
+
 const EqualsButton = ({ span = 1, col }) => {
   const { dispatch } = useContext(MathContext)
 
@@ -47,10 +48,6 @@ const EqualsButton = ({ span = 1, col }) => {
   function getColStart(col) {
     return col === 4 ? 'col4' : ''
   }
-
-  // function getColStartStyle(col) {
-  //   return col ? {  gridColumnStart: `'${col}'`  } : {}
-  // }
 }
 
 export default EqualsButton
