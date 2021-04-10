@@ -24,7 +24,7 @@ export const getValue = (model) => {
 }
 
 export const appendValue = (model, value) => {
-  // console.log('appendValue', value)
+  console.log('appendValue', value, model)
   // console.log('model', model)
   // console.log('value', value)
 
@@ -65,7 +65,7 @@ function hasRoom(num) {
 }
 
 export const operation = (model, operation) => {
-  // console.log('operation', operation, model)
+  console.log('operation', operation, model)
   switch (operation) {
     case 'AC':
       return { values: [0, 0] }
@@ -96,6 +96,7 @@ export const operation = (model, operation) => {
 }
 
 export const evaluate = (model) => {
+  console.log('evaluate', model)
   if (model.operator) {
     const equation = `${+model.values[0]} ${model.operator} ${+model.values[1]}`
     // console.log('equation', equation)
