@@ -5,10 +5,12 @@ import NumberButton from './NumberButton'
 import BinaryOperationButton from './BinaryOperationButton'
 import UnaryOperationButton from './UnaryOperationButton'
 
+import styles from './CalcApp.module.css'
+
 
 const Buttons = () => {
   return (
-    <div className="Buttons">
+    <div className={styles.Buttons}>
       <UnaryOperationButton text="AC" value="AC" />
       <UnaryOperationButton text="±" value="+-" />
       <UnaryOperationButton text="％" value="%" />

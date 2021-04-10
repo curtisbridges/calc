@@ -7,8 +7,9 @@ Background:
 2. This is 100% my own code, no copy and paste from other sources.
 3. I used a target design (iOS calculator, see below) and modified where I thought I could improve the design.
 4. This project is an example React app.
-5. React Hooks used include: `useContext`, `useState`, `useCallback`, `useRef`, `useReducer`.
-6. This project uses Jest for unit tests.
+5. React Hooks used include: `useContext`, `useState`, `useCallback`, `useRef`, `useReducer` as well as a custom hook.
+6. Both a link CSS stylesheet (global) and CSS (local) modules are used for styling.
+7. This project uses Jest for unit tests.
 
 [See the deployed version.](https://calc.curtisbridges.com/)
 
@@ -25,7 +26,7 @@ Background:
 - [x] Create model tests (Jest)
 - [x] Polish CSS
 - [x] Deploy to cloud host
-- [ ] handle keypressed events
+- [x] handle keypressed events
 - [ ] add animation on button presses
 - [ ] add more tests
 - [ ] refactor model to remove display related operations

@@ -3,6 +3,9 @@ import React, { useContext, useCallback } from 'react'
 import MathContext from '../context/MathContext'
 import useEventListener from '../hooks/useEventListener'
 
+import styles from './CalcApp.module.css'
+
+
 const UnaryOperationButton = ({ text, value }) => {
   const { dispatch } = useContext(MathContext)
 
@@ -22,7 +25,7 @@ const UnaryOperationButton = ({ text, value }) => {
           if (value === 'AC') {
             buttonPressed(value)
           }
-          break;
+          break
         default:
           if (key === value) {
             buttonPressed(value)
@@ -37,7 +40,7 @@ const UnaryOperationButton = ({ text, value }) => {
 
   return (
     <button
-      className="Button OperationButton UnaryOperationButton"
+      className={`${styles.Button} ${styles.OperationButton} ${styles.UnaryOperationButton}`}
       onClick={() => {
         buttonPressed(value)
       }}
