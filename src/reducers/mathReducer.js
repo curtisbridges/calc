@@ -6,6 +6,7 @@ const mathReducer = (state, action) => {
 
   const model = { ...state }
 
+  // console.log(action.type, model)
   switch (action.type) {
     case 'NUMBER_PRESSED':
       return appendValue(model, action.value)
@@ -14,7 +15,7 @@ const mathReducer = (state, action) => {
     case 'EQUAL_PRESSED':
       return evaluate(model)
     default:
-      return state
+      return model
   }
 }
 

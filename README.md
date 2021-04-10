@@ -6,6 +6,9 @@ Background:
 1. This is my own work, not a tutorial.
 2. This is 100% my own code, no copy and paste from other sources.
 3. I used a target design (iOS calculator, see below) and modified where I thought I could improve the design.
+4. This project is an example React app.
+5. React Hooks used include: `useContext`, `useState`, `useCallback`, `useRef`, `useReducer`.
+6. This project uses Jest for unit tests.
 
 [See the deployed version.](https://calc.curtisbridges.com/)
 

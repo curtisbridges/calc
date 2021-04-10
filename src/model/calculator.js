@@ -10,7 +10,7 @@ export const model = {
 
 export const getDisplayValue = (model) => {
   const value = getValue(model)
-
+  // console.log('display', model)
   if (Math.abs(value) > MAX_DISPLAY_VALUE) {
     return value.toExponential(2)
   } else {
@@ -19,10 +19,12 @@ export const getDisplayValue = (model) => {
 }
 
 export const getValue = (model) => {
+  // console.log('value', model)
   return model.operator ? +model.values[1] : +model.values[0]
 }
 
 export const appendValue = (model, value) => {
+  // console.log('appendValue', value)
   // console.log('model', model)
   // console.log('value', value)
 
@@ -63,6 +65,7 @@ function hasRoom(num) {
 }
 
 export const operation = (model, operation) => {
+  // console.log('operation', operation, model)
   switch (operation) {
     case 'AC':
       return { values: [0, 0] }
