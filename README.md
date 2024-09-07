@@ -26,7 +26,7 @@ Background:
 - [x] Create model tests (Jest)
 - [x] Polish CSS
 - [x] Deploy to cloud host
-- [x] handle keypressed events
+- [x] handle key pressed events
 - [ ] add animation on button presses
 - [ ] add more tests
 - [ ] refactor model to remove display related operations
